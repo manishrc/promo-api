@@ -1,5 +1,3 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
-
 ## Getting Started
 
 First, run the development server:
@@ -14,24 +12,58 @@ pnpm dev
 bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Size Charts
+### API
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+```
+Format:  /api/[sanmar|alphabroder]/[itemId]
+Example: /api/alphabroder/5180
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+### Example Response
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
-# promo-api
+```
+{
+  "supplier": "alphabroder",
+  "itemId": "5180",
+  "productName": "Hanes Unisex Beefy-T� T-Shirt",
+  "unit": "inch",
+  "measurements": ["body width", "full body length", "sleeve length"],
+  "sizes": ["S", "M", "L", "XL", "2XL", "3XL", "4XL", "5XL", "6XL"],
+  "sizeChart": {
+    "Chest Width": {
+      "S": 18,
+      "M": 20,
+      "L": 22,
+      "XL": 24,
+      "2XL": 26,
+      "3XL": 28,
+      "4XL": 30,
+      "5XL": 32,
+      "6XL": 36
+    },
+    "Body Length": {
+      "S": 28,
+      "M": 29,
+      "L": 30,
+      "XL": 31,
+      "2XL": 33,
+      "3XL": 34,
+      "4XL": 35,
+      "5XL": 36,
+      "6XL": 37
+    },
+    "Sleeve Length": {
+      "S": 8.13,
+      "M": 8.38,
+      "L": 8.63,
+      "XL": 8.88,
+      "2XL": 9.63,
+      "3XL": 10.13,
+      "4XL": 10.63,
+      "5XL": 11.13,
+      "6XL": 9.75
+    }
+  }
+}
+```
